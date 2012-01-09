@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE9C254914BB1382003DCA26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9C254814BB1382003DCA26 /* UIKit.framework */; };
+		FE9C254B14BB1382003DCA26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9C254A14BB1382003DCA26 /* Foundation.framework */; };
+		FE9C254D14BB1382003DCA26 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9C254C14BB1382003DCA26 /* CoreGraphics.framework */; };
+		FE9C255314BB1382003DCA26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE9C255114BB1382003DCA26 /* InfoPlist.strings */; };
+		FE9C255614BB1382003DCA26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9C255514BB1382003DCA26 /* main.m */; };
+		FE9C255914BB1382003DCA26 /* learnMadarinAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9C255814BB1382003DCA26 /* learnMadarinAppDelegate.m */; };
+		FE9C255C14BB1382003DCA26 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9C255A14BB1382003DCA26 /* MainWindow.xib */; };
+		FE9C255F14BB1382003DCA26 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9C255E14BB1382003DCA26 /* RootViewController.m */; };
+		FE9C256214BB1382003DCA26 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9C256014BB1382003DCA26 /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE9C254414BB1382003DCA26 /* learnMadarin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnMadarin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE9C254814BB1382003DCA26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE9C254A14BB1382003DCA26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE9C254C14BB1382003DCA26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE9C255014BB1382003DCA26 /* learnMadarin-Info.plist */ = {isa = PBXFileReference; path = "learnMadarin-Info.plist"; sourceTree = "<group>"; };
+		FE9C255214BB1382003DCA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE9C255414BB1382003DCA26 /* learnMadarin-Prefix.pch */ = {isa = PBXFileReference; path = "learnMadarin-Prefix.pch"; sourceTree = "<group>"; };
+		FE9C255514BB1382003DCA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE9C255714BB1382003DCA26 /* learnMadarinAppDelegate.h */ = {isa = PBXFileReference; path = learnMadarinAppDelegate.h; sourceTree = "<group>"; };
+		FE9C255814BB1382003DCA26 /* learnMadarinAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learnMadarinAppDelegate.m; sourceTree = "<group>"; };
+		FE9C255B14BB1382003DCA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		FE9C255D14BB1382003DCA26 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		FE9C255E14BB1382003DCA26 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FE9C256114BB1382003DCA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE9C254114BB1381003DCA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9C254914BB1382003DCA26 /* UIKit.framework in Frameworks */,
+				FE9C254B14BB1382003DCA26 /* Foundation.framework in Frameworks */,
+				FE9C254D14BB1382003DCA26 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE9C253914BB1381003DCA26 = {
+			isa = PBXGroup;
+			children = (
+				FE9C254E14BB1382003DCA26 /* learnMadarin */,
+				FE9C254714BB1382003DCA26 /* Frameworks */,
+				FE9C254514BB1382003DCA26 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE9C254514BB1382003DCA26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE9C254414BB1382003DCA26 /* learnMadarin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE9C254714BB1382003DCA26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE9C254814BB1382003DCA26 /* UIKit.framework */,
+				FE9C254A14BB1382003DCA26 /* Foundation.framework */,
+				FE9C254C14BB1382003DCA26 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE9C254E14BB1382003DCA26 /* learnMadarin */ = {
+			isa = PBXGroup;
+			children = (
+				FE9C255714BB1382003DCA26 /* learnMadarinAppDelegate.h */,
+				FE9C255814BB1382003DCA26 /* learnMadarinAppDelegate.m */,
+				FE9C255A14BB1382003DCA26 /* MainWindow.xib */,
+				FE9C255D14BB1382003DCA26 /* RootViewController.h */,
+				FE9C255E14BB1382003DCA26 /* RootViewController.m */,
+				FE9C256014BB1382003DCA26 /* RootViewController.xib */,
+				FE9C254F14BB1382003DCA26 /* Supporting Files */,
+			);
+			path = learnMadarin;
+			sourceTree = "<group>";
+		};
+		FE9C254F14BB1382003DCA26 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE9C255014BB1382003DCA26 /* learnMadarin-Info.plist */,
+				FE9C255114BB1382003DCA26 /* InfoPlist.strings */,
+				FE9C255414BB1382003DCA26 /* learnMadarin-Prefix.pch */,
+				FE9C255514BB1382003DCA26 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE9C254314BB1381003DCA26 /* learnMadarin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE9C256514BB1382003DCA26 /* Build configuration list for PBXNativeTarget "learnMadarin" */;
+			buildPhases = (
+				FE9C254014BB1381003DCA26 /* Sources */,
+				FE9C254114BB1381003DCA26 /* Frameworks */,
+				FE9C254214BB1381003DCA26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = learnMadarin;
+			productName = learnMadarin;
+			productReference = FE9C254414BB1382003DCA26 /* learnMadarin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE9C253B14BB1381003DCA26 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FE9C253E14BB1381003DCA26 /* Build configuration list for PBXProject "learnMadarin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FE9C253914BB1381003DCA26;
+			productRefGroup = FE9C254514BB1382003DCA26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE9C254314BB1381003DCA26 /* learnMadarin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE9C254214BB1381003DCA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9C255314BB1382003DCA26 /* InfoPlist.strings in Resources */,
+				FE9C255C14BB1382003DCA26 /* MainWindow.xib in Resources */,
+				FE9C256214BB1382003DCA26 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE9C254014BB1381003DCA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE9C255614BB1382003DCA26 /* main.m in Sources */,
+				FE9C255914BB1382003DCA26 /* learnMadarinAppDelegate.m in Sources */,
+				FE9C255F14BB1382003DCA26 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE9C255114BB1382003DCA26 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9C255214BB1382003DCA26 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FE9C255A14BB1382003DCA26 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9C255B14BB1382003DCA26 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		FE9C256014BB1382003DCA26 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9C256114BB1382003DCA26 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE9C256314BB1382003DCA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FE9C256414BB1382003DCA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		FE9C256614BB1382003DCA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "learnMadarin/learnMadarin-Prefix.pch";
+				INFOPLIST_FILE = "learnMadarin/learnMadarin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE9C256714BB1382003DCA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "learnMadarin/learnMadarin-Prefix.pch";
+				INFOPLIST_FILE = "learnMadarin/learnMadarin-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE9C253E14BB1381003DCA26 /* Build configuration list for PBXProject "learnMadarin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9C256314BB1382003DCA26 /* Debug */,
+				FE9C256414BB1382003DCA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE9C256514BB1382003DCA26 /* Build configuration list for PBXNativeTarget "learnMadarin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE9C256614BB1382003DCA26 /* Debug */,
+				FE9C256714BB1382003DCA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE9C253B14BB1381003DCA26 /* Project object */;
+}
