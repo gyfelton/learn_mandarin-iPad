@@ -10,9 +10,28 @@
 
 @implementation RootViewController
 
+- (void)parseTxtFile
+{
+    NSString *info = [NSString stringWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"resourceList" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
+    NSArray *lines = [info componentsSeparatedByString:@"\n"];
+    for (NSString *oneLine in lines) {
+        if (![[oneLine substringToIndex:1] isEqualToString:@"#"]) {
+            NSArray *subComponents = [oneLine componentsSeparatedByString:@","];
+            NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[subComponents objectAtIndex:0], @"imgName", [subComponents objectAtIndex:1], @"chinese", nil];
+            [_dictionary addObject:dict];
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _clickedBtnsArray  = [[NSMutableArray alloc] init];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.scrollEnabled = NO;
+    
+    _dictionary = [[NSMutableArray alloc] init];
+    [self parseTxtFile];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -43,6 +62,30 @@
 }
  */
 
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 44)] autorelease];
+//    view.backgroundColor = [UIColor redColor];
+    if (!_progressView) {
+            _progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    }
+    _progressView.frame = CGRectMake(0, 0, view.frame.size.width-44, 20);
+    _progressView.center = view.center;
+    _progressView.progress = 0.5f;
+    [view addSubview:_progressView];
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 125;
+}
+
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -51,13 +94,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 8;
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"wallCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -65,7 +108,56 @@
     }
 
     // Configure the cell.
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    int startingPosX = 90;
+    for (int i = 0; i<4; i++) {
+        UIView *view = [[[UIView alloc] initWithFrame:CGRectMake(startingPosX+i*150, (CELL_HEIGHT-120)/2, 120, 120)] autorelease];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(10, 10, 100, 100);
+        btn.layer.cornerRadius  = 10.0f;
+//        btn.backgroundColor = [UIColor redColor];
+        int n = rand()%2;
+        if (n==0) {
+            [btn setBackgroundImage:[UIImage imageNamed:@"kitten"] forState:UIControlStateNormal];
+        } else
+        {
+            btn.layer.borderColor = [[UIColor blackColor] CGColor];
+            btn.layer.borderWidth = 3.0f;
+            UILabel *label = [[UILabel alloc] initWithFrame:btn.bounds];
+            label.text = @"猫";
+            label.textColor = [UIColor blackColor];
+            label.textAlignment = UITextAlignmentCenter;
+            label.font = [UIFont systemFontOfSize:34];
+            label.tag = 333;
+            [btn addSubview:label];
+        }
+        
+        [btn addTarget:self action:@selector(oneTitleClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [view addSubview:btn];
+        [cell addSubview:view];
+    }
+    
     return cell;
+}
+
+- (void)oneTitleClicked:(UIButton*)btn
+{
+    btn.layer.borderColor = [[UIColor blackColor] CGColor];
+    btn.layer.borderWidth = 3.0f;
+    [_clickedBtnsArray addObject:btn];
+    if ([_clickedBtnsArray count] == 2) {
+        for (UIButton *btn in _clickedBtnsArray) {
+            [UIView beginAnimations:nil context:NULL];
+            [btn setBackgroundImage:nil forState:UIControlStateNormal];
+            btn.backgroundColor = [UIColor blueColor];
+            [[btn viewWithTag:333] removeFromSuperview];
+            [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:btn cache:YES];
+            [UIView setAnimationDuration:0.5f];
+            [UIView commitAnimations];
+        }
+        [_clickedBtnsArray removeAllObjects];
+        _progressView.progress+=0.1f;
+    }
 }
 
 /*
@@ -120,6 +212,13 @@
 	*/
 }
 
+- (void)dealloc
+{
+    [_progressView release];
+    [_clickedBtnsArray release];
+    [super dealloc];
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -134,11 +233,6 @@
 
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
-}
-
-- (void)dealloc
-{
-    [super dealloc];
 }
 
 @end

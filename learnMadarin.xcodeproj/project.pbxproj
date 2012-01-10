@@ -16,6 +16,9 @@
 		FE9C255C14BB1382003DCA26 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9C255A14BB1382003DCA26 /* MainWindow.xib */; };
 		FE9C255F14BB1382003DCA26 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9C255E14BB1382003DCA26 /* RootViewController.m */; };
 		FE9C256214BB1382003DCA26 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9C256014BB1382003DCA26 /* RootViewController.xib */; };
+		FE9C256B14BB13A5003DCA26 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE9C256914BB13A5003DCA26 /* MainWindow-iPad.xib */; };
+		FE9C257114BB1C0A003DCA26 /* kitten.png in Resources */ = {isa = PBXBuildFile; fileRef = FE9C257014BB1C0A003DCA26 /* kitten.png */; };
+		FEA6A57C14BBDFB20060F3CE /* resourceList.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEA6A57B14BBDFB20060F3CE /* resourceList.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +26,19 @@
 		FE9C254814BB1382003DCA26 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE9C254A14BB1382003DCA26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FE9C254C14BB1382003DCA26 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FE9C255014BB1382003DCA26 /* learnMadarin-Info.plist */ = {isa = PBXFileReference; path = "learnMadarin-Info.plist"; sourceTree = "<group>"; };
+		FE9C255014BB1382003DCA26 /* learnMadarin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "learnMadarin-Info.plist"; sourceTree = "<group>"; };
 		FE9C255214BB1382003DCA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FE9C255414BB1382003DCA26 /* learnMadarin-Prefix.pch */ = {isa = PBXFileReference; path = "learnMadarin-Prefix.pch"; sourceTree = "<group>"; };
+		FE9C255414BB1382003DCA26 /* learnMadarin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "learnMadarin-Prefix.pch"; sourceTree = "<group>"; };
 		FE9C255514BB1382003DCA26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FE9C255714BB1382003DCA26 /* learnMadarinAppDelegate.h */ = {isa = PBXFileReference; path = learnMadarinAppDelegate.h; sourceTree = "<group>"; };
+		FE9C255714BB1382003DCA26 /* learnMadarinAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = learnMadarinAppDelegate.h; sourceTree = "<group>"; };
 		FE9C255814BB1382003DCA26 /* learnMadarinAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = learnMadarinAppDelegate.m; sourceTree = "<group>"; };
 		FE9C255B14BB1382003DCA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		FE9C255D14BB1382003DCA26 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		FE9C255D14BB1382003DCA26 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		FE9C255E14BB1382003DCA26 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		FE9C256114BB1382003DCA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		FE9C256A14BB13A5003DCA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		FE9C257014BB1C0A003DCA26 /* kitten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kitten.png; sourceTree = "<group>"; };
+		FEA6A57B14BBDFB20060F3CE /* resourceList.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = resourceList.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		FE9C254E14BB1382003DCA26 /* learnMadarin */ = {
 			isa = PBXGroup;
 			children = (
+				FE9C256814BB13A3003DCA26 /* iPad */,
 				FE9C255714BB1382003DCA26 /* learnMadarinAppDelegate.h */,
 				FE9C255814BB1382003DCA26 /* learnMadarinAppDelegate.m */,
 				FE9C255A14BB1382003DCA26 /* MainWindow.xib */,
@@ -93,12 +100,38 @@
 		FE9C254F14BB1382003DCA26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE9C256C14BB1B81003DCA26 /* Resources */,
 				FE9C255014BB1382003DCA26 /* learnMadarin-Info.plist */,
 				FE9C255114BB1382003DCA26 /* InfoPlist.strings */,
 				FE9C255414BB1382003DCA26 /* learnMadarin-Prefix.pch */,
 				FE9C255514BB1382003DCA26 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE9C256814BB13A3003DCA26 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				FE9C256914BB13A5003DCA26 /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		FE9C256C14BB1B81003DCA26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEA6A57B14BBDFB20060F3CE /* resourceList.txt */,
+				FE9C256D14BB1B81003DCA26 /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE9C256D14BB1B81003DCA26 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FE9C257014BB1C0A003DCA26 /* kitten.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +184,9 @@
 				FE9C255314BB1382003DCA26 /* InfoPlist.strings in Resources */,
 				FE9C255C14BB1382003DCA26 /* MainWindow.xib in Resources */,
 				FE9C256214BB1382003DCA26 /* RootViewController.xib in Resources */,
+				FE9C256B14BB13A5003DCA26 /* MainWindow-iPad.xib in Resources */,
+				FE9C257114BB1C0A003DCA26 /* kitten.png in Resources */,
+				FEA6A57C14BBDFB20060F3CE /* resourceList.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +228,14 @@
 				FE9C256114BB1382003DCA26 /* en */,
 			);
 			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		FE9C256914BB13A5003DCA26 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE9C256A14BB13A5003DCA26 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -238,7 +282,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "learnMadarin/learnMadarin-Prefix.pch";
 				INFOPLIST_FILE = "learnMadarin/learnMadarin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -251,7 +297,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "learnMadarin/learnMadarin-Prefix.pch";
 				INFOPLIST_FILE = "learnMadarin/learnMadarin-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,6 +324,7 @@
 				FE9C256714BB1382003DCA26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
